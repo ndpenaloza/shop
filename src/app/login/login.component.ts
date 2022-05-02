@@ -14,8 +14,11 @@ export class LoginComponent {
   ngOnInit(): void {
   }
 
-  login() {
-    this.afAuth.signInWithRedirect(new firebase.GoogleAuthProvider());
+  // login() {
+  //   this.afAuth.signInWithRedirect(new firebase.GoogleAuthProvider());
+  // }
+  login = () => {
+    const provider = new firebase.GoogleAuthProvider();
+    this.afAuth.signInWithRedirect(provider);
   }
-
 }
